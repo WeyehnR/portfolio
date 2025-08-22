@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create a temporary anchor element for download
         const link = document.createElement("a");
-        link.href = "../assets/Weyehn_Reeves_Resume.pdf";
+        link.href = "assets/Weyehn_Reeves_Resume.pdf";
         link.download = "Weyehn_Reeves_Resume.pdf";
         link.target = "_blank";
 
