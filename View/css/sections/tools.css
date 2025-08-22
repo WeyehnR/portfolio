@@ -1,0 +1,235 @@
+/* Tools Section */
+.tools-section {
+  padding: 6rem 0;
+  background: #000000;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.tool-card {
+  background: #18181b;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #27272a;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  border-color: #22c55e;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+}
+
+.tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22c55e, transparent);
+  transition: left 0.5s ease;
+}
+
+.tool-card:hover::before {
+  left: 100%;
+}
+
+.tool-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.tool-icon svg {
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Tool Icon Colors */
+.linux-icon {
+  background: rgba(255, 165, 0, 0.1);
+  color: #ffa500;
+}
+.apache-icon {
+  background: rgba(216, 69, 69, 0.1);
+  color: #d84545;
+}
+.mysql-icon {
+  background: rgba(0, 117, 143, 0.1);
+  color: #00758f;
+}
+.github-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.nosql-icon {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+.api-icon {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+.slack-icon {
+  background: rgba(74, 21, 75, 0.1);
+  color: #4a154b;
+}
+.git-icon {
+  background: rgba(240, 80, 50, 0.1);
+  color: #f05032;
+}
+.figma-icon {
+  background: rgba(162, 89, 255, 0.1);
+  color: #a259ff;
+}
+.react-icon {
+  background: rgba(97, 219, 251, 0.1);
+  color: #61dafb;
+}
+.nextjs-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.nextjs-icon svg path {
+  fill: #ffffff;
+}
+.indesign-icon {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+}
+
+.tool-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.tool-description {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tool-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.feature-tag {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Tools Categories */
+.tools-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.category-section {
+  background: #18181b;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #27272a;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #22c55e;
+  margin-bottom: 1.5rem;
+}
+
+.category-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tool-badge {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tool-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    padding: 1.5rem;
+  }
+
+  .tool-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .tools-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .category-tools {
+    flex-direction: column;
+  }
+
+  .tool-badge {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-section {
+    padding: 4rem 0;
+  }
+
+  .tool-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-tag {
+    width: fit-content;
+  }
+}

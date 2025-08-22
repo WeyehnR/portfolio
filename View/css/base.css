@@ -1,0 +1,93 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  /* Hide scrollbar for Chrome, Safari, Opera, and Edge (Webkit browsers) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1db954, #1ed760);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Section Styles */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+  }
+}

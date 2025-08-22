@@ -1,0 +1,18 @@
+/* Main Portfolio CSS - Imports all modular stylesheets */
+
+/* Base Styles */
+@import url("./base.css");
+
+/* Components */
+@import url("./components/navigation.css");
+@import url("./components/tech-tags.css");
+
+/* Sections */
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/skills.css");
+@import url("./sections/projects.css");
+@import url("./sections/experience.css");
+@import url("./sections/contact.css");
+@import url("./sections/footer.css");
+@import url("./sections/tools.css");
