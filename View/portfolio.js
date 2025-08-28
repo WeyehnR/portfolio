@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
   initNavigation();
   initScrollEffects();
+  initFormHandling();
   initAnimations();
 
   // Navigation functionality
@@ -148,7 +149,64 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Form handling
+  function initFormHandling() {
+    const contactForm = document.getElementById("contactForm");
 
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(contactForm);
+        const formValues = {};
+
+        // Get all form inputs
+        const inputs = contactForm.querySelectorAll("input, select, textarea");
+        inputs.forEach((input) => {
+          if (input.name) {
+            formValues[input.name] = input.value;
+          }
+        });
+
+        // Basic validation
+        const requiredFields = contactForm.querySelectorAll("[required]");
+        let isValid = true;
+
+        requiredFields.forEach((field) => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = "#ef4444";
+
+            // Reset border color after 3 seconds
+            setTimeout(() => {
+              field.style.borderColor = "#3f3f46";
+            }, 3000);
+          }
+        });
+
+        if (isValid) {
+          // Simulate form submission
+          const submitBtn = contactForm.querySelector(".form-submit");
+          const originalText = submitBtn.innerHTML;
+
+          submitBtn.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+          submitBtn.disabled = true;
+
+          // Simulate API call
+          setTimeout(() => {
+            alert("Thank you for your message! I'll get back to you soon.");
+            contactForm.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 2000);
+        } else {
+          alert("Please fill in all required fields.");
+        }
+      });
+    }
+  }
 
   // Animation and interaction effects
   function initAnimations() {
