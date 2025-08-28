@@ -327,8 +327,8 @@
 
 /* Show mobile buttons on smaller screens, hide overlay */
 @media (max-width: 1023px) {
-  .project-overlay {
-    display: none !important;
+  .projects-section .project-overlay {
+    display: none;
   }
 
   .project-mobile-actions {

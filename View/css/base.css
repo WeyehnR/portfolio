@@ -1,6 +1,6 @@
 /* Reset and Base Styles */
 * {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   box-sizing: border-box;
 }
@@ -13,7 +13,7 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #000000;
   color: #ffffff;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   /* Hide scrollbar for Chrome, Safari, Opera, and Edge (Webkit browsers) */
@@ -63,6 +63,10 @@ body::-webkit-scrollbar {
 
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
+  .main-section {
+    margin-top: 90px; /* Account for fixed navigation height on mobile */
+  }
+
   .container {
     padding: 0 1rem;
   }
@@ -82,12 +86,24 @@ body::-webkit-scrollbar {
   }
 }
 
+/* Tablet Responsive Styles */
 @media (min-width: 481px) and (max-width: 768px) {
+  .main-section {
+    margin-top: 85px; /* Account for fixed navigation height on tablet */
+  }
+
   .section-title {
     font-size: 2.5rem;
   }
 
   .section-subtitle {
     font-size: 1.125rem;
+  }
+}
+
+/* Desktop Styles - No margin needed as hero is full height */
+@media (min-width: 769px) {
+  .main-section {
+    margin-top: 0; /* Desktop hero takes full viewport height */
   }
 }

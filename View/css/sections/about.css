@@ -37,10 +37,11 @@
 }
 
 /* Remove the duplicate .cta-card rule and consolidate into one */
-.cta-card {
-  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
-  color: #000000 !important;
-  margin: 0 !important; /* Force reset margins */
+/* Improved specificity, removed !important */
+.about-section .cta-card {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #000000;
+  margin: 0; /* Force reset margins */
 }
 
 .card-title {
