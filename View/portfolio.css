@@ -15,7 +15,7 @@ body {
   color: #ffffff;
   line-height: 1.6;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  /* scrollbar-width: none;  Firefox only, not supported in Chrome < 121, Safari, Samsung Internet */
   overflow-x: hidden;
 }
 

@@ -1,13 +1,14 @@
-// Wait for DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize all functionality
+// Wait for components to be fully loaded before initializing
+document.addEventListener("allComponentsLoaded", function () {
+  // Initialize all functionality after components are loaded
   initNavigation();
   initScrollEffects();
   initFormHandling();
   initAnimations();
+});
 
-  // Navigation functionality
-  function initNavigation() {
+// Navigation functionality
+function initNavigation() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll(".nav-link, .footer-link");
 
@@ -467,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function () {
       imageObserver.observe(img);
     });
   }
-});
+
 
 // Utility functions
 function debounce(func, wait) {

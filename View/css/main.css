@@ -5,11 +5,11 @@
 
 /* Components */
 @import url("./components/navigation.css");
-@import url("./components/tech-tags.css");
+/* @import url("./components/tech-tags.css"); */
 
 /* Sections */
 @import url("./sections/hero.css");
-@import url("./sections/about.css");
+@import url("./sections/about.css"); 
 @import url("./sections/skills.css");
 @import url("./sections/projects.css");
 @import url("./sections/experience.css");
