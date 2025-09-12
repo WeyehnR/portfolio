@@ -1,0 +1,4 @@
+/* Critical CSS - Above-the-fold styles for faster loading */
+@import url("./base.css");
+@import url("./components/navigation.css");
+@import url("./sections/hero.css");
