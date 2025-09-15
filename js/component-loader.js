@@ -52,10 +52,10 @@ class ComponentLoader {
           document.dispatchEvent(new CustomEvent("allComponentsLoaded"));
         }
       } else {
-        console.warn(`Container with id "${containerId}" not found`);
+        // console.warn(`Container with id "${containerId}" not found`);
       }
     } catch (error) {
-      console.error(`Error loading component ${filename}:`, error);
+      // console.error(`Error loading component ${filename}:`, error);
     }
   }
 
@@ -397,7 +397,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Remove loading indicator when all components are loaded
   document.addEventListener("allComponentsLoaded", function () {
     document.body.classList.remove("loading");
-    console.log("Portfolio fully loaded - all components ready");
+    // console.log("Portfolio fully loaded - all components ready");
 
     // Add a small delay to ensure DOM elements are accessible
     setTimeout(() => {
@@ -406,21 +406,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const mainContent = document.getElementById("about");
 
       if (header) {
-        console.log("✓ Navigation component loaded successfully");
+        // console.log("✓ Navigation component loaded successfully");
       } else {
-        console.warn("⚠ Navigation component may not have loaded properly");
+        // console.warn("⚠ Navigation component may not have loaded properly");
       }
 
       if (mainContent) {
-        console.log("✓ Main content components loaded successfully");
+        // console.log("✓ Main content components loaded successfully");
       }
 
       // Show debug instructions in console
-      console.log("🛠️ Debug Mode Available!");
-      console.log(
-        "Type 'loader.enableDebugMode()' in console to start debugging sections"
-      );
-      console.log("Or press Ctrl+Shift+D to toggle debug mode");
+      // console.log("🛠️ Debug Mode Available!");
+      // console.log(
+      //   "Type 'loader.enableDebugMode()' in console to start debugging sections"
+      // );
+      // console.log("Or press Ctrl+Shift+D to toggle debug mode");
     }, 100);
   });
 });
@@ -431,10 +431,10 @@ document.addEventListener("keydown", function (event) {
     event.preventDefault();
     if (loader && loader.debugMode) {
       loader.disableDebugMode();
-      console.log("Debug mode disabled");
+      // console.log("Debug mode disabled");
     } else if (loader) {
       loader.enableDebugMode();
-      console.log("Debug mode enabled");
+      // console.log("Debug mode enabled");
     }
   }
 });
