@@ -5,10 +5,11 @@
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: var(--header-bg);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #27272a;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
 }
 
 .nav-container {
@@ -33,7 +34,7 @@
 .logo-circle {
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -41,7 +42,7 @@
 }
 
 .logo-text {
-  color: #000000;
+  color: var(--bg-primary);
   font-weight: 700;
   font-size: 1.125rem;
 }
@@ -58,7 +59,7 @@
 }
 
 .nav-link {
-  color: #9ca3af;
+  color: var(--text-secondary);
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -66,7 +67,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .nav-actions {
@@ -76,8 +77,8 @@
 }
 
 .hire-btn {
-  background: #22c55e;
-  color: #000000;
+  background: var(--accent-primary);
+  color: var(--bg-primary);
   padding: 0.5rem 1.5rem;
   border-radius: 9999px;
   font-weight: 600;
@@ -87,14 +88,14 @@
 }
 
 .hire-btn:hover {
-  background: #16a34a;
+  background: var(--accent-secondary);
 }
 
 .mobile-menu-btn {
   display: block;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.25rem;
   cursor: pointer;
 }
@@ -111,7 +112,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.98);
+    background: var(--header-bg);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     padding: 2rem 1.5rem;
@@ -121,7 +122,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-top: 1px solid #27272a;
+    border-top: 1px solid var(--border-color);
   }
 
   .nav-links.mobile-active {
