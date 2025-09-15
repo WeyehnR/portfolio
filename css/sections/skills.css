@@ -1,6 +1,6 @@
 /* Skills Section */
 .skills-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background: #18181b;
 }
 
@@ -36,8 +36,8 @@
 }
 
 .react-icon {
-  background: rgba(96, 165, 250, 0.2);
-  color: #60a5fa;
+  background: rgba(97, 219, 251, 0.1);
+  color: #61dafb;
 }
 
 .js-icon {
@@ -45,14 +45,38 @@
   color: #fbbf24;
 }
 
-.css-icon {
+.nextjs-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.nextjs-icon svg path {
+  fill: #ffffff;
+}
+
+.web-icon {
   background: rgba(59, 130, 246, 0.2);
   color: #3b82f6;
 }
 
-.ts-icon {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
+.php-icon {
+  background: rgba(120, 113, 208, 0.2);
+  color: #7871d0;
+}
+
+.database-icon {
+  background: rgba(0, 117, 143, 0.1);
+  color: #00758f;
+}
+
+.git-icon {
+  background: rgba(240, 80, 50, 0.1);
+  color: #f05032;
+}
+
+.api-icon {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
 }
 
 .skill-name {

@@ -10,7 +10,6 @@ class ComponentLoader {
       { id: "hero-container", file: "hero.html", name: "Hero" },
       { id: "about-container", file: "about.html", name: "About" },
       { id: "skills-container", file: "skills.html", name: "Skills" },
-      { id: "tools-container", file: "tools.html", name: "Tools" },
       { id: "projects-container", file: "projects.html", name: "Projects" },
       {
         id: "experience-container",
@@ -391,12 +390,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loader = new ComponentLoader();
   loader.loadAllComponents();
 
-  // Add loading indicator
-  document.body.classList.add("loading");
-
   // Remove loading indicator when all components are loaded
   document.addEventListener("allComponentsLoaded", function () {
-    document.body.classList.remove("loading");
     // console.log("Portfolio fully loaded - all components ready");
 
     // Add a small delay to ensure DOM elements are accessible
@@ -439,26 +434,3 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// Optional: Add loading styles
-const style = document.createElement("style");
-style.textContent = `
-  body.loading {
-    opacity: 0.7;
-    pointer-events: none;
-  }
-  
-  body.loading::before {
-    content: "Loading...";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #22c55e;
-    color: #000;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    z-index: 9999;
-    font-weight: 600;
-  }
-`;
-document.head.appendChild(style);

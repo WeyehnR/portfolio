@@ -446,69 +446,6 @@ scrollToTopBtn.addEventListener("click", function () {
   });
 });
 
-// Preloader (optional)
-const preloader = document.createElement("div");
-preloader.id = "preloader";
-preloader.innerHTML = `
-        <div class="preloader-content">
-            <div class="preloader-spinner"></div>
-            <p>Loading...</p>
-        </div>
-    `;
-preloader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 0.5s ease;
-    `;
-
-const preloaderContent = preloader.querySelector(".preloader-content");
-if (preloaderContent) {
-  preloaderContent.style.cssText = `
-            text-align: center;
-            color: #fff;
-        `;
-}
-
-// Add spinner styles
-const spinnerStyle = document.createElement("style");
-spinnerStyle.textContent = `
-        .preloader-spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #333;
-            border-top: 4px solid #22c55e;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    `;
-document.head.appendChild(spinnerStyle);
-document.body.appendChild(preloader);
-
-// Hide preloader when page loads
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    preloader.style.opacity = "0";
-    setTimeout(() => {
-      preloader.remove();
-      spinnerStyle.remove();
-    }, 500);
-  }, 1000);
-});
 
 // Performance optimization - lazy loading images
 if ("IntersectionObserver" in window) {
