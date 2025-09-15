@@ -66,10 +66,16 @@ function initNavigation() {
     });
   }
 
-  // Handle download resume button
+  // Handle download resume button with fallback
   const downloadBtn = document.querySelector(".primary-btn");
   if (downloadBtn && downloadBtn.textContent.includes("Download Resume")) {
     downloadBtn.addEventListener("click", function (e) {
+      // If it's already an anchor with download attribute, let it work naturally
+      if (this.tagName === 'A' && this.hasAttribute('download')) {
+        return; // Let the browser handle the download
+      }
+
+      // Fallback for button elements
       e.preventDefault();
 
       // Create a temporary anchor element for download

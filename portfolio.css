@@ -1136,6 +1136,21 @@ body::-webkit-scrollbar {
   color: #06b6d4;
 }
 
+.tech-tag.json {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.tech-tag.chrome {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.tech-tag.grid {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+}
+
 /* Contact Section */
 .contact-section {
   padding: 6rem 0;
