@@ -48,6 +48,12 @@ Thumbs.db
 *.txt
 !README.txt
 !LICENSE.txt
+DEPLOYMENT_CHECKLIST.md
+things to do.txt
+
+# Google verification files
+google*.html
+sitemap.xml
 
 # Claude Code settings (keep local but ignore personal)
 .claude/settings.local.json
