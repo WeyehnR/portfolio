@@ -57,3 +57,4 @@ sitemap.xml
 
 # Claude Code settings (keep local but ignore personal)
 .claude/settings.local.json
+assets/
