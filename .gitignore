@@ -58,3 +58,7 @@ sitemap.xml
 # Claude Code settings (keep local but ignore personal)
 .claude/settings.local.json
 assets/
+
+GitHub_Portfolio_Analysis.md
+Springfield_MA_Web_Developer_Jobs.md
+.gitignore
