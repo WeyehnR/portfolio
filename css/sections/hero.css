@@ -20,29 +20,7 @@
   opacity: 0.2;
 }
 
-.effect-circle {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(48px);
-}
 
-.effect-1 {
-  top: 5rem;
-  left: 5rem;
-  width: 24rem;
-  height: 24rem;
-  background: #22c55e;
-  opacity: 0.3;
-}
-
-.effect-2 {
-  bottom: 5rem;
-  right: 5rem;
-  width: 20rem;
-  height: 20rem;
-  background: #22c55e;
-  opacity: 0.2;
-}
 
 .hero-content {
   position: relative;
@@ -50,7 +28,7 @@
   text-align: center;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
 /* Profile Image Styles */
@@ -85,9 +63,6 @@
   }
 }
 
-.hero-greeting {
-  margin-bottom: 1.5rem;
-}
 
 .greeting-text {
   color: #22c55e;
@@ -290,21 +265,61 @@
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 768px) {
+  .greeting-text {
+    font-size: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+
   .hero-buttons {
     flex-direction: row;
     gap: 1.5rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .greeting-text {
+    font-size: 3.75rem;
+  }
+
   .hero-title {
-    font-size: 6rem;
+    font-size: 4.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.875rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .greeting-text {
+    font-size: 4rem;
+  }
+
   .hero-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.875rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1.5rem;
   }
 }
+
+

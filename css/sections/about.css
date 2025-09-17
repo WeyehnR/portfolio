@@ -224,6 +224,31 @@
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .stat-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .stat-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .stat-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .stat-card:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 @media (max-width: 768px) {
@@ -237,7 +262,5 @@
     grid-template-columns: repeat(2, 1fr); /* Back to 2 columns on mobile */
   }
 
-  .stats-grid .stat-card:last-child {
-    grid-column: span 2; /* Make the work experience span both columns on mobile */
-  }
+  
 }
