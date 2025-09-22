@@ -8,6 +8,7 @@ document.addEventListener("allComponentsLoaded", function () {
   initSectionFadeEffect(["about", "experience", "projects", "skills", "tools"]);
   initFormHandling();
   initAnimations();
+  initSkillsCarousel();
 });
 
 // Navigation functionality
@@ -201,8 +202,17 @@ function initSectionFadeEffect(sectionIds) {
       // Ensure ratio is between 0 and 1
       visibilityRatio = Math.max(0, Math.min(1, visibilityRatio));
 
-      // Apply exponential curve for stronger fade effect
-      section.style.opacity = Math.pow(visibilityRatio, 3);
+      // Apply different fade curves based on section
+      let opacity;
+      if (sectionId === 'skills') {
+        // Gentler fade for skills section - linear with minimum opacity
+        opacity = Math.max(0.3, visibilityRatio);
+      } else {
+        // Stronger exponential curve for other sections
+        opacity = Math.pow(visibilityRatio, 3);
+      }
+
+      section.style.opacity = opacity;
     }, 16); // 60fps throttling
 
     window.addEventListener("scroll", updateSectionOpacity);
@@ -270,8 +280,7 @@ function initFormHandling() {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Get form data
-      const formData = new FormData(contactForm);
+      // Get form values
       const formValues = {};
 
       // Get all form inputs
@@ -500,7 +509,7 @@ scrollToTopBtn.addEventListener("click", function () {
 
 // Performance optimization - lazy loading images
 if ("IntersectionObserver" in window) {
-  const imageObserver = new IntersectionObserver((entries, observer) => {
+  const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target;
@@ -540,6 +549,112 @@ function throttle(func, limit) {
       setTimeout(() => (inThrottle = false), limit);
     }
   };
+}
+
+// Skills Carousel functionality
+function initSkillsCarousel() {
+  const carousel = document.querySelector('.skills-carousel');
+  const categories = document.querySelectorAll('.skills-category');
+  const indicators = document.querySelectorAll('.indicator');
+  const leftArrow = document.querySelector('.carousel-arrow-left');
+  const rightArrow = document.querySelector('.carousel-arrow-right');
+
+  if (!carousel || categories.length === 0) return;
+
+  let currentIndex = 0;
+  const totalCategories = categories.length;
+
+  // Show the first category initially
+  categories[0].classList.add('active');
+
+  function showCategory(index) {
+    // Remove active class from all categories and indicators
+    categories.forEach(cat => cat.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+
+    // Add active class to current category and indicator
+    categories[index].classList.add('active');
+    if (indicators[index]) {
+      indicators[index].classList.add('active');
+    }
+
+    // Update arrow states
+    if (leftArrow && rightArrow) {
+      leftArrow.disabled = index === 0;
+      rightArrow.disabled = index === totalCategories - 1;
+    }
+  }
+
+  function nextCategory() {
+    if (currentIndex < totalCategories - 1) {
+      currentIndex++;
+      showCategory(currentIndex);
+    }
+  }
+
+  function prevCategory() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showCategory(currentIndex);
+    }
+  }
+
+  // Arrow click handlers
+  if (leftArrow) {
+    leftArrow.addEventListener('click', prevCategory);
+  }
+
+  if (rightArrow) {
+    rightArrow.addEventListener('click', nextCategory);
+  }
+
+  // Indicator click handlers
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentIndex = index;
+      showCategory(currentIndex);
+    });
+  });
+
+  // Touch/swipe support for mobile
+  let startX = 0;
+  let endX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50; // Minimum swipe distance
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        // Swipe left - next category
+        nextCategory();
+      } else {
+        // Swipe right - previous category
+        prevCategory();
+      }
+    }
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevCategory();
+    } else if (e.key === 'ArrowRight') {
+      nextCategory();
+    }
+  });
+
+  // Initialize
+  showCategory(currentIndex);
 }
 
 // Export functions for external use if needed

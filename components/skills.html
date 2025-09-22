@@ -7,128 +7,225 @@
       </p>
     </div>
 
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon react-icon">
-          <i class="fa-brands fa-react"></i>
+    <div class="skills-carousel-container">
+      <button class="carousel-arrow carousel-arrow-left" aria-label="Previous category">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="skills-carousel">
+        <div class="skills-category" data-category="programming">
+          <h3 class="category-title">Programming Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon js-icon">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h4 class="skill-name">JavaScript</h4>
+              <p class="skill-description">
+                ES6+ features and interactive web applications
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">ES6+</span>
+                <span class="tech-tag">DOM API</span>
+                <span class="tech-tag">Async/Await</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon php-icon">
+                <i class="fa-brands fa-php"></i>
+              </div>
+              <h4 class="skill-name">PHP</h4>
+              <p class="skill-description">
+                Server-side development and MVC architecture
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">MVC Pattern</span>
+                <span class="tech-tag">PDO</span>
+                <span class="tech-tag">Authentication</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon web-icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h4 class="skill-name">HTML/CSS</h4>
+              <p class="skill-description">
+                Semantic markup and responsive design principles
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">Flexbox</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="skill-name">React</h3>
-        <p class="skill-description">
-          Component-based development and modern React patterns
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">Hooks</span>
-          <span class="tech-tag">Components</span>
-          <span class="tech-tag">State Management</span>
+
+        <div class="skills-category" data-category="frameworks">
+          <h3 class="category-title">Frameworks & Libraries</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon react-icon">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h4 class="skill-name">React</h4>
+              <p class="skill-description">
+                Component-based development and modern React patterns
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Hooks</span>
+                <span class="tech-tag">Components</span>
+                <span class="tech-tag">State Management</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon nextjs-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+                  <path fill="currentColor" d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"></path>
+                </svg>
+              </div>
+              <h4 class="skill-name">Next.js</h4>
+              <p class="skill-description">
+                Full-stack React framework with SSR and optimization
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">SSR</span>
+                <span class="tech-tag">API Routes</span>
+                <span class="tech-tag">Performance</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon node-icon">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+              <h4 class="skill-name">Node.js</h4>
+              <p class="skill-description">
+                Server-side JavaScript runtime and API development
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">NPM</span>
+                <span class="tech-tag">Backend APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category" data-category="tools">
+          <h3 class="category-title">Tools & Technologies</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon git-icon">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <h4 class="skill-name">Git & GitHub</h4>
+              <p class="skill-description">
+                Version control and collaborative development
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Version Control</span>
+                <span class="tech-tag">Branching</span>
+                <span class="tech-tag">Pull Requests</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon database-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h4 class="skill-name">MySQL</h4>
+              <p class="skill-description">
+                Database design and complex query development
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Database Design</span>
+                <span class="tech-tag">Complex Queries</span>
+                <span class="tech-tag">Optimization</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon linux-icon">
+                <i class="fa-brands fa-linux"></i>
+              </div>
+              <h4 class="skill-name">Linux & Apache</h4>
+              <p class="skill-description">
+                Server administration and web hosting
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Server Config</span>
+                <span class="tech-tag">Apache</span>
+                <span class="tech-tag">Command Line</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category" data-category="development">
+          <h3 class="category-title">Development & Design</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon api-icon">
+                <i class="fa-solid fa-exchange-alt"></i>
+              </div>
+              <h4 class="skill-name">REST APIs</h4>
+              <p class="skill-description">
+                API development and integration patterns
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">RESTful Design</span>
+                <span class="tech-tag">JSON</span>
+                <span class="tech-tag">API Testing</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon figma-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <h4 class="skill-name">Figma</h4>
+              <p class="skill-description">
+                UI/UX design and prototyping
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">UI Design</span>
+                <span class="tech-tag">Prototyping</span>
+                <span class="tech-tag">Design Systems</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon chrome-icon">
+                <i class="fa-brands fa-chrome"></i>
+              </div>
+              <h4 class="skill-name">Chrome APIs</h4>
+              <p class="skill-description">
+                Browser extension development
+              </p>
+              <div class="skill-tech-stack">
+                <span class="tech-tag">Extensions</span>
+                <span class="tech-tag">Manifest V3</span>
+                <span class="tech-tag">Content Scripts</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="skill-card">
-        <div class="skill-icon js-icon">
-          <i class="fa-brands fa-js"></i>
-        </div>
-        <h3 class="skill-name">JavaScript</h3>
-        <p class="skill-description">
-          ES6+ features and interactive web applications
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">ES6+</span>
-          <span class="tech-tag">DOM API</span>
-          <span class="tech-tag">Async/Await</span>
-        </div>
-      </div>
+      <button class="carousel-arrow carousel-arrow-right" aria-label="Next category">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
 
-      <div class="skill-card">
-        <div class="skill-icon nextjs-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-            <path fill="currentColor" d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"></path>
-          </svg>
-        </div>
-        <h3 class="skill-name">Next.js</h3>
-        <p class="skill-description">
-          Full-stack React framework with SSR and optimization
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">SSR</span>
-          <span class="tech-tag">API Routes</span>
-          <span class="tech-tag">Performance</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon web-icon">
-          <i class="fa-brands fa-html5"></i>
-        </div>
-        <h3 class="skill-name">HTML/CSS</h3>
-        <p class="skill-description">
-          Semantic markup and responsive design principles
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">Responsive Design</span>
-          <span class="tech-tag">CSS Grid</span>
-          <span class="tech-tag">Flexbox</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon php-icon">
-          <i class="fa-brands fa-php"></i>
-        </div>
-        <h3 class="skill-name">PHP</h3>
-        <p class="skill-description">
-          Server-side development and MVC architecture
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">MVC Pattern</span>
-          <span class="tech-tag">PDO</span>
-          <span class="tech-tag">Authentication</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon database-icon">
-          <i class="fa-solid fa-database"></i>
-        </div>
-        <h3 class="skill-name">MySQL</h3>
-        <p class="skill-description">
-          Database design and complex query development
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">Database Design</span>
-          <span class="tech-tag">Complex Queries</span>
-          <span class="tech-tag">Optimization</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon git-icon">
-          <i class="fa-brands fa-git-alt"></i>
-        </div>
-        <h3 class="skill-name">Git & GitHub</h3>
-        <p class="skill-description">
-          Version control and collaborative development
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">Version Control</span>
-          <span class="tech-tag">Branching</span>
-          <span class="tech-tag">Pull Requests</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon api-icon">
-          <i class="fa-solid fa-exchange-alt"></i>
-        </div>
-        <h3 class="skill-name">REST APIs</h3>
-        <p class="skill-description">
-          API development and integration patterns
-        </p>
-        <div class="skill-tech-stack">
-          <span class="tech-tag">RESTful Design</span>
-          <span class="tech-tag">JSON</span>
-          <span class="tech-tag">API Testing</span>
-        </div>
-      </div>
+    <div class="carousel-indicators">
+      <button class="indicator active" data-category="programming"></button>
+      <button class="indicator" data-category="frameworks"></button>
+      <button class="indicator" data-category="tools"></button>
+      <button class="indicator" data-category="development"></button>
     </div>
   </div>
 </section>
