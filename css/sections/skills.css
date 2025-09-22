@@ -2,6 +2,8 @@
 .skills-section {
   padding: 4rem 0;
   background: #18181b;
+  transition: opacity 0.1s ease-out;
+  transform: translate3d(0, 0, 0);
 }
 
 .skills-grid {

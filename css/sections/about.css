@@ -2,6 +2,8 @@
 .about-section {
   padding: 6rem 0;
   background: linear-gradient(180deg, #000000 0%, #18181b 100%);
+  transition: opacity 0.1s ease-out;
+  transform: translate3d(0, 0, 0);
 }
 
 .about-grid {

@@ -3,6 +3,9 @@ document.addEventListener("allComponentsLoaded", function () {
   // Initialize all functionality after components are loaded
   initNavigation();
   initScrollEffects();
+  initHeroFadeEffect();
+  // Initialize fade effect for selected sections
+  initSectionFadeEffect(["about", "experience", "projects", "skills", "tools"]);
   initFormHandling();
   initAnimations();
 });
@@ -169,6 +172,48 @@ function initNavigation() {
       }
     });
   }
+}
+
+// Generalized section fade effect based on viewport visibility
+function initSectionFadeEffect(sectionIds) {
+  sectionIds.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const updateSectionOpacity = throttle(() => {
+      const rect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // Calculate visibility percentage based on how much of section is in viewport
+      let visibilityRatio;
+
+      if (rect.top >= 0) {
+        // Section is fully or partially below viewport top
+        visibilityRatio = Math.min(1, rect.bottom / viewportHeight);
+      } else if (rect.bottom <= viewportHeight) {
+        // Section is fully or partially above viewport bottom
+        visibilityRatio = Math.max(0, rect.bottom / viewportHeight);
+      } else {
+        // Section spans entire viewport
+        visibilityRatio = 1;
+      }
+
+      // Ensure ratio is between 0 and 1
+      visibilityRatio = Math.max(0, Math.min(1, visibilityRatio));
+
+      // Apply exponential curve for stronger fade effect
+      section.style.opacity = Math.pow(visibilityRatio, 3);
+    }, 16); // 60fps throttling
+
+    window.addEventListener("scroll", updateSectionOpacity);
+
+    updateSectionOpacity();
+  });
+}
+
+// Hero fade effect (kept separate for potential customization)
+function initHeroFadeEffect() {
+  initSectionFadeEffect(["home"]);
 }
 
 // Scroll effects and active navigation
