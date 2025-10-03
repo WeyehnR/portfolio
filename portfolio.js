@@ -396,6 +396,27 @@ function initAnimations() {
     });
   });
 
+  // See More button interactions
+  const seeMoreBtns = document.querySelectorAll(".see-more-btn");
+  seeMoreBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const projectContent = this.closest(".project-content");
+      const whySection = projectContent.querySelector(".project-why");
+
+      if (whySection) {
+        if (whySection.style.display === "none") {
+          whySection.style.display = "block";
+          this.textContent = "See Less";
+          this.classList.add("active");
+        } else {
+          whySection.style.display = "none";
+          this.textContent = "See More";
+          this.classList.remove("active");
+        }
+      }
+    });
+  });
+
   // Intersection Observer for fade-in animations
   const observerOptions = {
     threshold: 0.1,

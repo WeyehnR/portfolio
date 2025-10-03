@@ -99,6 +99,49 @@
   line-height: 1.5;
 }
 
+.project-why {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  padding: 0.75rem;
+  background: rgba(34, 197, 94, 0.05);
+  border-left: 3px solid #22c55e;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.project-why strong {
+  color: #22c55e;
+}
+
+.keyword {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.see-more-btn {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.see-more-btn:hover {
+  background: #22c55e;
+  color: #000000;
+}
+
+.see-more-btn.active {
+  background: rgba(34, 197, 94, 0.1);
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
