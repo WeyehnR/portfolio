@@ -88,7 +88,7 @@
 }
 
 .hire-btn:hover {
-  background: var(--accent-secondary);
+  background: var(--accent-primary-hover);
 }
 
 .mobile-menu-btn {

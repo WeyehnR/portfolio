@@ -21,3 +21,10 @@ export const ANIMATION_CONFIG = {
   typewriterDuration: 4500,
   fadeTransitionDuration: 600
 };
+
+export const CAL_CONFIG = {
+  
+  calLink: "weyehn-reeves-hnhotd",
+  elementSelector: "#calendar"
+  
+}

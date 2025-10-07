@@ -4,6 +4,7 @@ import { initAnimations } from './animations.js';
 import { initSkillsCarousel } from './carousel.js';
 import { initFormHandling } from './forms.js';
 import { initInteractions } from './interactions.js';
+import { initCalendar } from './calendar.js';
 
 // Wait for components to be fully loaded before initializing
 document.addEventListener("allComponentsLoaded", function () {
@@ -12,4 +13,5 @@ document.addEventListener("allComponentsLoaded", function () {
   initSkillsCarousel();
   initFormHandling();
   initInteractions();
+  initCalendar();
 });
