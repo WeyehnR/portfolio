@@ -1,4 +1,5 @@
 // User interaction effects
+import { SOCIAL_LINKS } from './config.js';
 
 export function initInteractions() {
   initProjectCardHovers();
@@ -46,11 +47,11 @@ function initSocialLinks() {
 
         let url = "#";
         if (iconClass.includes("github")) {
-          url = "https://github.com/WeyehnR";
+          url = SOCIAL_LINKS.github;
         } else if (iconClass.includes("linkedin")) {
-          url = "https://www.linkedin.com/in/weyehnr01/";
+          url = SOCIAL_LINKS.linkedin;
         } else if (iconClass.includes("envelope")) {
-          url = "mailto:weyehn1@gmail.com";
+          url = SOCIAL_LINKS.email;
         }
 
         if (url !== "#") {

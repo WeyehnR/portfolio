@@ -1,18 +1,4 @@
-/* CSS Variables for Dark Theme */
-:root {
-  --bg-primary: #000000;
-  --bg-secondary: #18181b;
-  --bg-tertiary: #27272a;
-  --text-primary: #ffffff;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
-  --accent-primary: #22c55e;
-  --accent-secondary: #1db954;
-  --border-color: #3f3f46;
-  --card-bg: #18181b;
-  --header-bg: rgba(0, 0, 0, 0.95);
-  --gradient-primary: linear-gradient(135deg, #1db954, #1ed760);
-}
+/* Base styles - uses variables from variables.css */
 
 /* Reset and Base Styles */
 * {
@@ -26,24 +12,20 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  /* Hide scrollbar for Chrome, Safari, Opera, and Edge (Webkit browsers) */
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  line-height: var(--line-height-normal);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
 }
+
 .main-section {
   margin-top: 72px;
   min-height: calc(100vh - 80px);
@@ -51,9 +33,9 @@ body::-webkit-scrollbar {
 
 /* Utility Classes */
 .container {
-  max-width: 1400px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--container-padding);
 }
 
 .gradient-text {
@@ -66,17 +48,17 @@ body::-webkit-scrollbar {
 /* Section Styles */
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-4xl);
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
 }
 
 .section-subtitle {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   color: var(--text-secondary);
   max-width: 48rem;
   margin: 0 auto;
@@ -85,17 +67,17 @@ body::-webkit-scrollbar {
 /* Mobile Responsive Styles */
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 var(--spacing-md);
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: var(--font-size-2xl);
     line-height: 1.2;
   }
 
   .section-subtitle {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-tight);
   }
 
   .section-header {
@@ -109,6 +91,6 @@ body::-webkit-scrollbar {
   }
 
   .section-subtitle {
-    font-size: 1.125rem;
+    font-size: var(--font-size-lg);
   }
 }

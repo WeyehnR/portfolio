@@ -9,6 +9,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 - Downloadable resume
 - Contact form
 - Mobile-friendly navigation
+- Debug panel for development (press `Ctrl+Shift+D` or type `enableDebugMode()` in console)
 
 ## Technologies Used
 

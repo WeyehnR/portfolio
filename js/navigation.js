@@ -1,4 +1,5 @@
 // Navigation functionality
+import { ASSETS, SCROLL_CONFIG } from './config.js';
 
 export function initNavigation() {
   setupSmoothScrolling();
@@ -77,7 +78,7 @@ function setupHeroButtons() {
       e.preventDefault();
 
       const link = document.createElement("a");
-      link.href = "assets/Weyehn_Reeves_Resume.pdf";
+      link.href = ASSETS.resume;
       link.download = "Weyehn_Reeves_Resume.pdf";
       link.target = "_blank";
 
@@ -171,7 +172,7 @@ function setupScrollEffects() {
     let current = "";
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
+      const sectionTop = section.offsetTop - SCROLL_CONFIG.sectionOffset;
       const sectionHeight = section.offsetHeight;
 
       if (
@@ -197,7 +198,7 @@ function setupScrollEffects() {
   // Header background on scroll
   const header = document.getElementById("header");
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
+    if (window.scrollY > SCROLL_CONFIG.headerChangeThreshold) {
       header.style.backgroundColor = "rgba(0, 0, 0, 0.98)";
     } else {
       header.style.backgroundColor = "rgba(0, 0, 0, 0.95)";

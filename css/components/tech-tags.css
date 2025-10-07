@@ -1,192 +1,109 @@
 /* Tech Tags - Shared Component */
+
+/* Base tech tag styles */
 .tech-tag {
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
 }
 
-.tech-tag.react {
-  background: rgba(96, 165, 250, 0.2);
-  color: #60a5fa;
+/* Color variables for tech tags */
+:root {
+  /* Blue shades */
+  --tech-blue-light: rgba(96, 165, 250, 0.2);
+  --tech-blue-light-text: #60a5fa;
+  --tech-blue: rgba(59, 130, 246, 0.2);
+  --tech-blue-text: #3b82f6;
+  --tech-cyan: rgba(6, 182, 212, 0.2);
+  --tech-cyan-text: #06b6d4;
+
+  /* Green shades */
+  --tech-green: rgba(34, 197, 94, 0.2);
+  --tech-green-text: #22c55e;
+
+  /* Red shades */
+  --tech-red: rgba(239, 68, 68, 0.2);
+  --tech-red-text: #ef4444;
+
+  /* Orange shades */
+  --tech-orange: rgba(249, 115, 22, 0.2);
+  --tech-orange-text: #f97316;
+  --tech-amber: rgba(245, 158, 11, 0.2);
+  --tech-amber-text: #f59e0b;
+
+  /* Yellow shades */
+  --tech-yellow: rgba(251, 191, 36, 0.2);
+  --tech-yellow-text: #fbbf24;
+
+  /* Purple shades */
+  --tech-purple: rgba(168, 85, 247, 0.2);
+  --tech-purple-text: #a855f7;
+  --tech-violet: rgba(139, 92, 246, 0.2);
+  --tech-violet-text: #8b5cf6;
+  --tech-indigo: rgba(99, 102, 241, 0.2);
+  --tech-indigo-text: #6366f1;
+
+  /* Pink shades */
+  --tech-pink: rgba(236, 72, 153, 0.2);
+  --tech-pink-text: #ec4899;
 }
 
-.tech-tag.firebase {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
+/* Tech tag color mappings - organized by color family */
 
-.tech-tag.tailwind {
-  background: rgba(6, 182, 212, 0.2);
-  color: #06b6d4;
-}
+/* Blue family - Frontend/CSS/Web */
+.tech-tag.react { background: var(--tech-blue-light); color: var(--tech-blue-light-text); }
+.tech-tag.css { background: var(--tech-blue); color: var(--tech-blue-text); }
+.tech-tag.api { background: var(--tech-blue); color: var(--tech-blue-text); }
+.tech-tag.communication { background: var(--tech-blue); color: var(--tech-blue-text); }
+.tech-tag.grid { background: var(--tech-blue); color: var(--tech-blue-text); }
+.tech-tag.tailwind { background: var(--tech-cyan); color: var(--tech-cyan-text); }
+.tech-tag.ai { background: var(--tech-cyan); color: var(--tech-cyan-text); }
+.tech-tag.data-structures { background: var(--tech-cyan); color: var(--tech-cyan-text); }
 
-.tech-tag.js {
-  background: rgba(251, 191, 36, 0.2);
-  color: #fbbf24;
-}
+/* Green family - Backend/Node/Services */
+.tech-tag.node { background: var(--tech-green); color: var(--tech-green-text); }
+.tech-tag.socket { background: var(--tech-green); color: var(--tech-green-text); }
+.tech-tag.vue { background: var(--tech-green); color: var(--tech-green-text); }
+.tech-tag.python { background: var(--tech-green); color: var(--tech-green-text); }
+.tech-tag.service { background: var(--tech-green); color: var(--tech-green-text); }
 
-.tech-tag.api {
-  background: rgba(59, 130, 246, 0.2);
-  color: #3b82f6;
-}
+/* Red family - Databases/Firebase/Critical */
+.tech-tag.firebase { background: var(--tech-red); color: var(--tech-red-text); }
+.tech-tag.websocket { background: var(--tech-red); color: var(--tech-red-text); }
+.tech-tag.mysql { background: var(--tech-red); color: var(--tech-red-text); }
+.tech-tag.algorithms { background: var(--tech-red); color: var(--tech-red-text); }
+.tech-tag.pdo { background: var(--tech-red); color: var(--tech-red-text); }
 
-.tech-tag.chart {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
+/* Orange family - HTML/Redis */
+.tech-tag.html { background: var(--tech-orange); color: var(--tech-orange-text); }
+.tech-tag.redis { background: var(--tech-orange); color: var(--tech-orange-text); }
 
-.tech-tag.socket {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
+/* Amber family - Java/Problem Solving */
+.tech-tag.java { background: var(--tech-amber); color: var(--tech-amber-text); }
+.tech-tag.problem-solving { background: var(--tech-amber); color: var(--tech-amber-text); }
 
-.tech-tag.postgres {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
+/* Yellow family - JavaScript/Charts/JSON */
+.tech-tag.js { background: var(--tech-yellow); color: var(--tech-yellow-text); }
+.tech-tag.d3 { background: var(--tech-yellow); color: var(--tech-yellow-text); }
+.tech-tag.json { background: var(--tech-yellow); color: var(--tech-yellow-text); }
+.tech-tag.chrome { background: var(--tech-yellow); color: var(--tech-yellow-text); }
 
-.tech-tag.redis {
-  background: rgba(249, 115, 22, 0.2);
-  color: #f97316;
-}
+/* Purple family - GraphQL/Postgres/Advanced */
+.tech-tag.chart { background: var(--tech-purple); color: var(--tech-purple-text); }
+.tech-tag.postgres { background: var(--tech-purple); color: var(--tech-purple-text); }
+.tech-tag.graphql { background: var(--tech-purple); color: var(--tech-purple-text); }
+.tech-tag.education { background: var(--tech-purple); color: var(--tech-purple-text); }
+.tech-tag.asl { background: var(--tech-purple); color: var(--tech-purple-text); }
+.tech-tag.mvc { background: var(--tech-purple); color: var(--tech-purple-text); }
 
-.tech-tag.vue {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
+/* Violet family - PHP */
+.tech-tag.php { background: var(--tech-violet); color: var(--tech-violet-text); }
 
-.tech-tag.d3 {
-  background: rgba(251, 191, 36, 0.2);
-  color: #fbbf24;
-}
+/* Indigo family - TypeScript/WordPress/Web */
+.tech-tag.typescript { background: var(--tech-indigo); color: var(--tech-indigo-text); }
+.tech-tag.wordpress { background: var(--tech-indigo); color: var(--tech-indigo-text); }
+.tech-tag.web { background: var(--tech-indigo); color: var(--tech-indigo-text); }
 
-.tech-tag.websocket {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
-
-.tech-tag.typescript {
-  background: rgba(99, 102, 241, 0.2);
-  color: #6366f1;
-}
-
-.tech-tag.node {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
-
-.tech-tag.graphql {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
-
-.tech-tag.html {
-  background: rgba(249, 115, 22, 0.2);
-  color: #f97316;
-}
-
-.tech-tag.css {
-  background: rgba(59, 130, 246, 0.2);
-  color: #3b82f6;
-}
-
-.tech-tag.wordpress {
-  background: rgba(99, 102, 241, 0.2);
-  color: #6366f1;
-}
-
-.tech-tag.php {
-  background: rgba(139, 92, 246, 0.2);
-  color: #8b5cf6;
-}
-
-.tech-tag.python {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
-
-.tech-tag.mysql {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
-
-.tech-tag.java {
-  background: rgba(245, 158, 11, 0.2);
-  color: #f59e0b;
-}
-
-.tech-tag.web {
-  background: rgba(99, 102, 241, 0.2);
-  color: #6366f1;
-}
-
-.tech-tag.education {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
-
-.tech-tag.ui {
-  background: rgba(236, 72, 153, 0.2);
-  color: #ec4899;
-}
-
-.tech-tag.ai {
-  background: rgba(6, 182, 212, 0.2);
-  color: #06b6d4;
-}
-
-.tech-tag.service {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
-
-.tech-tag.communication {
-  background: rgba(59, 130, 246, 0.2);
-  color: #3b82f6;
-}
-
-.tech-tag.asl {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
-
-.tech-tag.problem-solving {
-  background: rgba(245, 158, 11, 0.2);
-  color: #f59e0b;
-}
-
-.tech-tag.algorithms {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
-
-.tech-tag.data-structures {
-  background: rgba(6, 182, 212, 0.2);
-  color: #06b6d4;
-}
-
-.tech-tag.json {
-  background: rgba(251, 191, 36, 0.2);
-  color: #fbbf24;
-}
-
-.tech-tag.mvc {
-  background: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-}
-
-.tech-tag.pdo {
-  background: rgba(239, 68, 68, 0.2);
-  color: #ef4444;
-}
-
-.tech-tag.grid {
-  background: rgba(59, 130, 246, 0.2);
-  color: #3b82f6;
-}
-
-.tech-tag.chrome {
-  background: rgba(251, 191, 36, 0.2);
-  color: #fbbf24;
-}
+/* Pink family - UI/Design */
+.tech-tag.ui { background: var(--tech-pink); color: var(--tech-pink-text); }

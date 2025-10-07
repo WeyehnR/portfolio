@@ -1,5 +1,6 @@
 // Animation and fade effects
 import { throttle } from './utils.js';
+import { ANIMATION_CONFIG, SCROLL_CONFIG } from './config.js';
 
 export function initAnimations() {
   initHeroFadeEffect();
@@ -42,7 +43,7 @@ function initSectionFadeEffect(sectionIds) {
       }
 
       section.style.opacity = opacity;
-    }, 16);
+    }, ANIMATION_CONFIG.throttleDelay);
 
     window.addEventListener("scroll", updateSectionOpacity);
     updateSectionOpacity();
@@ -81,7 +82,7 @@ function initCardAnimations() {
   if (typewriterElement) {
     setTimeout(() => {
       typewriterElement.style.borderRight = "none";
-    }, 4500);
+    }, ANIMATION_CONFIG.typewriterDuration);
   }
 }
 
@@ -110,7 +111,7 @@ function initScrollToTop() {
   document.body.appendChild(scrollToTopBtn);
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 500) {
+    if (window.scrollY > SCROLL_CONFIG.scrollToTopThreshold) {
       scrollToTopBtn.style.opacity = "1";
       scrollToTopBtn.style.visibility = "visible";
     } else {
