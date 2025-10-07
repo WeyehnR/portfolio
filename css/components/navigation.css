@@ -52,6 +52,21 @@
   font-weight: 700;
 }
 
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .logo-circle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+}
+
 .nav-links {
   display: none;
   align-items: center;

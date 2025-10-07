@@ -22,8 +22,6 @@
   opacity: 0.2;
 }
 
-
-
 .hero-content {
   position: relative;
   z-index: 10;
@@ -36,6 +34,7 @@
 /* Profile Image Styles */
 .hero-profile {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .profile-image {
