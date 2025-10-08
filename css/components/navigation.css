@@ -116,7 +116,7 @@
 }
 
 /* Mobile Menu Styles */
-@media (max-width: 767px) {
+@media (max-width: 949px) {
   .hire-btn {
     display: none;
   }
