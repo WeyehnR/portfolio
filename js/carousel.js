@@ -61,16 +61,31 @@ export function initSkillsCarousel() {
     });
   });
 
-  // Touch/swipe support
+  // Touch/swipe support with visual feedback
   let startX = 0;
   let endX = 0;
+  let isDragging = false;
 
   carousel.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
-  });
+    isDragging = true;
+    carousel.style.transition = 'none';
+  }, { passive: true });
+
+  carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+
+    // Add slight visual feedback during drag
+    carousel.style.transform = `translateX(${diff * 0.1}px)`;
+  }, { passive: true });
 
   carousel.addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
+    isDragging = false;
+    carousel.style.transition = 'transform 0.3s ease-out';
+    carousel.style.transform = 'translateX(0)';
     handleSwipe();
   });
 
