@@ -13,7 +13,7 @@
     <meta property="og:title" content="Weyehn Reeves | Frontend Developer">
     <meta property="og:description" content="Frontend Developer and Computer Science graduate from UMass Amherst. Specialized in React, JavaScript, and modern web technologies.">
     <meta property="og:image" content="assets/me.jpg">
-    <meta property="og:url" content="https://weyehnr.github.io/My-Profolio/">
+    <meta property="og:url" content="https://weyehn.dev">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Weyehn Reeves Portfolio">
     
@@ -23,46 +23,17 @@
     <meta name="twitter:description" content="Frontend Developer and Computer Science graduate from UMass Amherst. Specialized in React, JavaScript, and modern web technologies.">
     <meta name="twitter:image" content="assets/me.jpg">
     
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Weyehn Reeves",
-      "jobTitle": "Frontend Developer",
-      "description": "Computer Science graduate and Frontend Developer specializing in React, JavaScript, and modern web technologies",
-      "url": "https://weyehnr.github.io/My-Profolio/",
-      "image": "https://weyehnr.github.io/My-Profolio/assets/me.jpg",
-      "email": "weyehn1@gmail.com",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of Massachusetts Amherst",
-        "sameAs": "https://www.umass.edu/"
-      },
-      "knowsAbout": [
-        "JavaScript",
-        "React",
-        "HTML",
-        "CSS",
-        "Frontend Development",
-        "Web Development",
-        "Computer Science",
-        "Database Management",
-        "Modern Web Technologies"
-      ],
-      "sameAs": [
-        "https://github.com/WeyehnR",
-        "https://www.linkedin.com/in/weyehnr01"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Available for Hire"
-      }
-    }
+    <!-- Structured Data (JSON-LD) - Injected from config.js -->
+    <script type="module">
+      import { STRUCTURED_DATA } from './js/config.js';
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(STRUCTURED_DATA);
+      document.head.appendChild(script);
     </script>
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://weyehnr.github.io/My-Profolio/">
+    <link rel="canonical" href="https://weyehn.dev">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

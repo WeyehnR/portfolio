@@ -21,7 +21,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 
 ## Live Demo
 
-Visit: https://weyehnr.github.io/My-Profolio/
+Visit: https://weyehn.dev
 
 ## Contact
 
