@@ -48,7 +48,7 @@
   margin-left: 6rem;
   background: #18181b;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   border: 1px solid #27272a;
 }
 
@@ -125,5 +125,21 @@
 
   .experience-period {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 500px){
+  .timeline-content {
+    margin-left: 0;
+    padding: 5rem 1rem 5rem 1rem;
+  }
+
+  .timeline-marker{
+    left: 12px;
+    top: 12px;
+  }
+
+  .timeline-line{
+    left:2.7rem;
   }
 }
