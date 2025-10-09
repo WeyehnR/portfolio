@@ -9,23 +9,21 @@
 .about-grid {
   display: grid;
   gap: 4rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* This creates the gap between direct children */
+  gap: 3rem;
 }
 
 .about-services {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: 100%; /* Make it take full height of its container */
   max-height: none; /* Remove the height restriction */
   margin-bottom: 0;
-  justify-content: space-between; /* Distribute content evenly */
 }
 
 .about-card,
@@ -33,9 +31,20 @@
 .cta-card {
   background: #18181b;
   border-radius: 1rem;
-  padding: 2rem;
   border: 1px solid #27272a;
   margin: 0; /* Reset all margins to let gap handle spacing */
+}
+
+.about-card {
+  padding: 2rem;
+}
+
+.services-card {
+  padding: 2rem;
+}
+
+.cta-card {
+  padding: 2rem;
 }
 
 /* Remove the duplicate .cta-card rule and consolidate into one */
@@ -98,9 +107,8 @@
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   flex: 1; /* Take up remaining space */
-  justify-content: center; /* Center the services vertically */
 }
 
 .service-item {
@@ -140,8 +148,8 @@
 .services-card {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Match the height of its sibling */
-  min-height: 400px;
+  gap: 1rem;
+  flex: 1;
 }
 
 .cta-card {
@@ -225,6 +233,21 @@
 @media (min-width: 768px) {
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
+
+  .about-content,
+  .about-services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-card.main-card {
+    height: 100%;
+  }
+
+  .services-card {
+    height: 100%;
   }
 
   .stats-grid {
